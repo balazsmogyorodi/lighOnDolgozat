@@ -14,6 +14,7 @@ class Controller{
 
         $(window).on("lampa_kapcsolas", (event) =>{
             model.setAdat(event.detail);
+            model.setKorulotte(event.detail);
             this.#adatok = model.getAdatok();
             this.#szuloElem.empty();
             new JatekTer(this.#adatok, this.#szuloElem);
