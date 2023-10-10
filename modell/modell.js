@@ -38,20 +38,18 @@ class Modell {
     }
 
     #bal(id){
-        id += -1;
-        if (id < 0){
+        if ((id%3)-1 < 0){
             return;
         } else{
+            id += -1
             this.setAdat(id);
         }
     }
-    #jobb(id){
-        id += +1;
-        if (id > this.#adatok.length-1){
-            return;
-        } else{
+    #jobb(id){    
+        if ((id%3)+1 <= 2){
+            id += 1
             this.setAdat(id);
-        }
+        } 
     }
     #felette(id){
         id += -this.#adatok.length/3

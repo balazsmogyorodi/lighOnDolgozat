@@ -15,7 +15,6 @@ class JatekMezo{
     }
 
     #elemAllapotEllenorzo(){
-       console.log(this.#adat)
         if (this.#adat == 1){
             this.#divElem.addClass("bekapcs")
         }

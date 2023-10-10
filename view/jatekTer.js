@@ -13,7 +13,6 @@ class JatekTer{
     }
 
     #init(){
-        console.log(this.#adatok.length)
         for (let index = 0; index < this.#adatok.length; index++) {
           new JatekMezo(this.#adatok[index], this.#szuloElem, index);
         }
