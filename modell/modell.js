@@ -16,8 +16,18 @@ class Modell {
         this.#adatok[id] += 1;
         if (this.#adatok[id] > 1) {
             this.#adatok[id] = 0;
+        } 
+    }
+
+    adatokKeverese(){
+        for (let index = 0; index < this.#adatok.length; index++) {
+           let esely = Math.floor(Math.random() * 10);
+           if (esely < 5){
+            this.#adatok[index] = 0;
+           } else {
+            this.#adatok[index] = 1;
+           }
         }
-       
     }
 
     setKorulotte(id){
@@ -25,8 +35,6 @@ class Modell {
        this.#jobb(id)
        this.#felette(id)
        this.#alatta(id)
-
-
     }
 
     #bal(id){
